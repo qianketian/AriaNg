@@ -14,6 +14,8 @@
             });
         };
 
+
+
         var processTask = function (task) {
             if (!task) {
                 return;
@@ -30,6 +32,10 @@
             }
 
             $scope.task = ariaNgCommonService.copyObjectTo(task, $scope.task);
+
+            $scope.task && ($scope.task['localDownload'] = 'http://192.168.100.100/download/'+ $scope.task.taskName)
+
+            console.log($scope.task)
 
             $rootScope.taskContext.list = [$scope.task];
             $rootScope.taskContext.selected = {};

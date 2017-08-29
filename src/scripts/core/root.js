@@ -84,6 +84,7 @@
                 for (var i = 0; i < this.list.length; i++) {
                     var task = this.list[i];
 
+
                     if (this.selected[task.gid]) {
                         result.push(task.gid);
                     }
